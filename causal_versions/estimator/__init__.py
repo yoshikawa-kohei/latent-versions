@@ -1,0 +1,1 @@
+from .mnlogit import MultinomialLogisticRegression

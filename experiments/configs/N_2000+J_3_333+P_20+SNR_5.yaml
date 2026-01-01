@@ -1,0 +1,25 @@
+name: correct_spec
+out_dir: results/N_2000+J_3_333+P_20+SNR_5
+number_of_simulation: 100
+data:
+  n_samples: 2000
+  n_treatments: 3
+  n_versions:
+  - 3
+  - 3
+  - 3
+  covariate_dim: 20
+  treatment_strength: 2
+  version_strength: 2
+  snr: 5
+  binomial: false
+model:
+  treatment:
+    cls: MultinomialLogisticRegression
+    kwargs: {}
+  version:
+    cls: MoE
+    kwargs:
+      n_components: 3
+      max_iter: 500
+      tol: 1.0e-05
